@@ -25,7 +25,9 @@ const NavBar = () =>{
                     </Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink className={styles.nav_link}><h1>drikkelek#2</h1></NavLink>
+                <Link href="/overEllerUnder/">
+                        <NavLink className={styles.nav_link}><h1>Over eller under</h1></NavLink>
+                    </Link>
                 </NavItem>
                 <NavItem>
                     <NavLink className={styles.nav_link}><h1>drikkelek#3</h1></NavLink>
