@@ -1,6 +1,8 @@
 import styles from '../styles/Home.module.css'
 import NavBar from '../Components/Nav/NavComponent'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import HomeComponent from '../Components/home'
+
 
 export default function Home() {
   return (
@@ -8,7 +10,7 @@ export default function Home() {
     <div className="">
       <NavBar />
       <div className={styles.container}>
-        <h1>Welcome to ultorcs</h1>
+        <HomeComponent />
       </div>
     </div>
   )

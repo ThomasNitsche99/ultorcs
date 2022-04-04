@@ -16,12 +16,12 @@ const NavBar = () =>{
                 </NavItem>
                 <NavItem>
                     <Link href="/hestelop/">
-                        <NavLink className={styles.nav_link}><h1>Hesteløp</h1></NavLink>
+                        <NavLink className={styles.nav_link}><h1 style={{color:"white"}}>Hesteløp</h1></NavLink>
                     </Link>
                 </NavItem>
                 <NavItem>
                     <Link href="/randomizer/">
-                        <NavLink className={styles.nav_link}><h1>Randomizer</h1></NavLink>
+                        <NavLink className={styles.nav_link}><h1 style={{color:"white"}}>Randomizer</h1></NavLink>
                     </Link>
                 </NavItem>
                 <NavItem>
@@ -30,10 +30,10 @@ const NavBar = () =>{
                     </Link>
                 </NavItem>
                 <NavItem>
-                    <NavLink className={styles.nav_link}><h1>drikkelek#3</h1></NavLink>
+                    <NavLink className={styles.nav_link}><h1 style={{color:"white"}}>drikkelek#3</h1></NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink className={styles.nav_link}><h1>drikkelek#4</h1></NavLink>
+                    <NavLink className={styles.nav_link}><h1 style={{color:"white"}}>drikkelek#4</h1></NavLink>
                 </NavItem>   
             </Nav>
         </div>
