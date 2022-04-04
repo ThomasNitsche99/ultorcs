@@ -6,14 +6,16 @@ import { Button } from "reactstrap";
 
 
 
-const OeUComponent = (props) =>{
+const OuE_lostMessage = (props) =>{
 
   
       return (
-        <div>
-          <OeUBoard/>
+        <div className={!props.visible? styles.OuE_lostmessage : styles.OuE_lostmessage_visible}>
+          <h1>You lost!</h1>
+          <br />
+          <h1>JAAAAAA</h1>
         </div>
   )
 }
 
-export default OeUComponent;
+export default OuE_lostMessage;

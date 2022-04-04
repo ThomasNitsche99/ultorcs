@@ -26,7 +26,7 @@ const NavBar = () =>{
                 </NavItem>
                 <NavItem>
                 <Link href="/overEllerUnder/">
-                        <NavLink className={styles.nav_link}><h1>Over eller under</h1></NavLink>
+                        <NavLink className={styles.nav_link}><h1 style={{color:"white"}}>Over/under</h1></NavLink>
                     </Link>
                 </NavItem>
                 <NavItem>
