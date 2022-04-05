@@ -13,6 +13,7 @@ const OeUBoard = (props) =>{
     const [deckId, setDeckId] = useState("");
     const [start,setStart] = useState(true);
     const [gameLost, setGameLost] = useState(true);
+    const [counter, setCounter] = useState(0);
   
 
     const requestOptions = {
@@ -109,6 +110,7 @@ const OeUBoard = (props) =>{
             setGameLost(true);
             setCard(prefetchedCard);
           }
+          increment();
         }
         
     }
@@ -135,8 +137,13 @@ const OeUBoard = (props) =>{
             setGameLost(true);
             setCard(prefetchedCard);
           }
+          increment();
         }
 
+    }
+
+    const increment = () =>{
+      setCounter(counter+1);
     }
 
 
@@ -144,6 +151,11 @@ const OeUBoard = (props) =>{
       if(start){
         getCard();
         setGameLost(false);
+
+        if(counter>0){
+          getDeck();
+          setCounter(0);
+        }
       }
       setStart(false);
     }
@@ -155,19 +167,20 @@ const OeUBoard = (props) =>{
 
     //prefetches next card
     useEffect( () =>{
+        
         prefetchCard();
     }, [card])
 
       return (
 
         <div className={styles.OeU_container}>
-          <Button className={styles.OeU_start_button}  onClick={handleStart} >start</Button>
-          <OuE_lostMessage visible={gameLost}/>
+          <Button className={styles.OeU_start_button}  onClick={handleStart} style={{backgroundColor:"#ED1C24", color:"white", fontSize:"40px"}} >Kjør</Button>
+          <OuE_lostMessage visible={gameLost} counter={counter}/>
 
-          <div className={styles.OeU_board}>
+          <div className={gameLost? styles.OeU_board_lostGame :styles.OeU_board} >
             
             <div>
-              <Button className={styles.OeU_button} onClick={handleOver} disabled={gameLost? true : false}>Over</Button>
+              <Button className={styles.OeU_button} onClick={handleOver} disabled={gameLost? true : false} style={{backgroundColor:"#ED1C24", color:"white", fontSize:"40px"}}>Over</Button>
             </div>
 
             <div className={styles.OeU_card}>
@@ -175,7 +188,7 @@ const OeUBoard = (props) =>{
             </div>
 
             <div>
-                <Button className={styles.OeU_button} onClick={handleunder}disabled={gameLost? true : false}>Under</Button>
+                <Button className={styles.OeU_button} onClick={handleunder}disabled={gameLost? true : false} style={{backgroundColor:"#ED1C24", color:"white", fontSize:"40px"}}>Under</Button>
             </div>
 
           </div>

@@ -3,7 +3,7 @@ import styles from '../../styles/Home.module.css'
 import NavBar from "../../Components/Nav/NavComponent";
 import RandomizerComponent from "../../Components/randomizer/randomizerComponent";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import FooterComponent from "../../Components/footer/footer";
 
 
 const Randomizer = () =>{
@@ -13,7 +13,7 @@ const Randomizer = () =>{
             <div className={styles.container}>
               <RandomizerComponent />
             </div>
-
+          <FooterComponent />
         </div>
   )
 }
